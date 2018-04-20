@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="codegen.xsd">
+	<variables>
+		<variable name="developer" value="administrator" />
+		<variable name="email" value="administrator"/>
+		<variable name="company" value="内陆渔船开发项目组" />
+	</variables>
+	
+	<templates>		
+	
+		<template id="mapping" path="cnfm\mapping.ftl" />
+		<template id="entity" path="cnfm\entity.ftl" />
+		<template id="dao" path="cnfm\dao.ftl" />
+		<template id="daoImpl" path="cnfm\daoImpl.ftl" />
+		<template id="ngEdit" path="cnfm\ngEdit.ftl" />
+		<template id="listJs" path="cnfm\listJs.jsp" />
+		<template id="getNg" path="cnfm\getNg.jsp" />
+		<template id="commonView" path="cnfm\commonView.ftl" />
+		
+		<!-- 页面跳转的方式 -->
+		<!-- 
+		<template id="controller" path="cnfm\controller.ftl" />
+		<template id="manager" path="cnfm\manager.ftl" />
+		<template id="managerImpl" path="cnfm\managerImpl.ftl" />
+		<template id="result" path="cnfm\result.ftl" /> 
+		<template id="view" path="cnfm\view.ftl" /> 
+		<template id="remove" path="cnfm\remove.ftl" /> 
+		<template id="list" path="cnfm\list.ftl" /> 
+		<template id="edit" path="cnfm\edit.ftl" /> 
+		<template id="js" path="cnfm\js.ftl" />
+		<template id="search" path="cnfm\search.ftl" />
+		-->
+		
+		
+		<!-- json风格的 -->
+		
+		<template id="controller" path="cnfm\controller_json.ftl" />
+		<template id="manager" path="cnfm\manager_json.ftl" />
+		<template id="managerImpl" path="cnfm\managerImpl_json.ftl" />
+		<template id="view" path="cnfm\view_json.ftl" /> 
+		<template id="remove" path="cnfm\remove_json.ftl" /> 
+		<template id="list" path="cnfm\list_json.ftl" /> 
+		<template id="edit" path="cnfm\edit_json.ftl" /> 
+		<template id="js" path="cnfm\js_json.ftl" />
+		
+		
+		
+	</templates>
+	
+	<files baseDir="D:\codetemplate">
+		<file refTemplate="mapping" filename="{class}.map.xml" dir="project\resources\com\sky\{system}\{package}\persistence\mapping" sub="true" override="true" />
+		<file refTemplate="entity" filename="{class}.java" dir="project\src\com\sky\{system}\{package}\persistence\model" sub="true" override="true" />
+		<file refTemplate="dao" filename="{class}Dao.java" dir="project\src\com\sky\{system}\{package}\persistence\dao" sub="true" override="true" />
+		<file refTemplate="daoImpl" filename="{class}DaoImpl.java" dir="project\src\com\sky\{system}\{package}\persistence\dao\impl" sub="true" override="true" />
+		<file refTemplate="manager" filename="{class}Manager.java" dir="project\src\com\sky\{system}\{package}\persistence\manager" sub="false" override="true" />
+		<file refTemplate="managerImpl" filename="{class}ManagerImpl.java" dir="project\src\com\sky\{system}\{package}\persistence\manager\impl" sub="false" override="true" />
+	
+		<file refTemplate="controller" filename="{class}Controller.java" dir="\project\src\com\sky\{system}\{package}\controller" override="true" />
+		<!-- <file refTemplate="ngEdit" filename="{classVar}Edit.jsp" dir="project\web\WEB-INF\view\{system}\{package}\" override="true" />
+		<file refTemplate="listJs" filename="{classVar}List.jsp" dir="project\web\WEB-INF\view\{system}\{package}\" override="true" />
+		<file refTemplate="getNg" filename="{classVar}Get.jsp" dir="project\web\WEB-INF\view\{system}\{package}\" override="true" />
+		<file refTemplate="getController" filename="{classVar}GetController.js" dir="project\web\js\{system}\{package}\{classVar}" override="true" /> -->
+		
+		<file refTemplate="commonView" filename="{classVar}CommonView.jsp" dir="project\web\WEB-INF\view\{system}\{package}\" override="true" />
+		<file refTemplate="edit" filename="{classVar}Edit.jsp" dir="project\web\WEB-INF\view\{system}\{package}\" override="true" />
+		<file refTemplate="list" filename="{classVar}List.jsp" dir="project\web\WEB-INF\view\{system}\{package}\" override="true" />
+		<file refTemplate="remove" filename="{classVar}Remove.jsp" dir="project\web\WEB-INF\view\{system}\{package}\" override="true" />
+		<file refTemplate="view" filename="{classVar}View.jsp" dir="project\web\WEB-INF\view\{system}\{package}\" override="true" />
+		<file refTemplate="js" filename="{package}.js" dir="project\web\cnfm\js\{system}\{package}\" override="true" />
+		
+		<!-- 页面跳转的方式 -->
+		<!-- 
+		<file refTemplate="search" filename="{classVar}Search.jsp" dir="project\web\WEB-INF\view\{system}\{package}\" override="true" />
+		<file refTemplate="result" filename="{classVar}Result.jsp" dir="project\web\WEB-INF\view\{system}\{package}\" override="true" />
+		-->
+	</files>
+
+	<table tableName="tzsc_sq_yy">
+		<variable name="class" value="tzscsq" />
+		<variable name="package" value="tzscsq" />
+	</table>
+</config>
